@@ -1,6 +1,9 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:green_dash_pie_cat2/models/BubbleChart.dart';
+import 'package:green_dash_pie_cat2/models/PieChart.dart';
+import 'package:green_dash_pie_cat2/models/columnChart.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,31 +15,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   TextEditingController _dateController = TextEditingController();
-  final List<ChartData> chartData = [
-    ChartData('Buisness', 30, const Color.fromARGB(255, 31, 71, 33)),
-    ChartData('Education', 10, const Color.fromARGB(255, 14, 221, 21)),
-    ChartData('Home', 60, Colors.black),
-  ];
-final List<ChartData2> chartData2 = [
-            ChartData2('Jan', 500,const Color.fromARGB(31, 0, 0, 0)),
-            ChartData2('Feb', 900,const Color.fromARGB(61, 0, 0, 0)),
-            ChartData2('Mar', 1500,const Color.fromARGB(104, 0, 0, 0)),
-            ChartData2('Apr', 2000,const Color.fromARGB(127, 0, 0, 0)),
-            ChartData2('May', 2500,const Color.fromARGB(192, 0, 0, 0)),
-            ChartData2('Jun', 3000,Colors.black)
-        ];
-          final List<ChartData3> chartData3 = [
-             ChartData3(DateTime(2009), 35, 0.82, const Color.fromARGB(0, 45, 231, 20),''),
-            ChartData3(DateTime(2010), 35, 0.82, const Color.fromARGB(166, 45, 231, 20),'\$310\nBuisness'),
-            ChartData3(DateTime(2011), 120, 0.41,const Color.fromARGB(141, 45, 231, 20),'\$100\nEmi'),
-            ChartData3(DateTime(2012), 70, 0.38,const Color.fromARGB(73, 45, 231, 20),'\$90\nExtras'),
-            ChartData3(DateTime(2013), 150, 0.49,const Color.fromARGB(153, 45, 231, 20),'\$200\nGroceries'),
-            ChartData3(DateTime(2014), 40, 0.64,const Color.fromARGB(204, 45, 231, 20),'\$300\nInsurances'),
-            ChartData3(DateTime(2015), 130, 0.40,const Color.fromARGB(97, 45, 231, 20),'\$150\nRent'),
-            ChartData3(DateTime(2016), 180, 0.3,const Color.fromARGB(111, 45, 231, 20),'\$100\nInternet'),
-            ChartData3(DateTime(2016), 40, 1.04,const Color.fromARGB(255, 45, 231, 20),'\$500\nBuisness'),
-            ChartData3(DateTime(2017), 0, .04,const Color.fromARGB(0, 45, 231, 20),''),
-        ];
+ 
+
+       
 
   @override
   Widget build(BuildContext context) {
@@ -1297,23 +1278,6 @@ final List<ChartData2> chartData2 = [
   }
 }
 
-class ChartData {
-  ChartData(this.x, this.y, [this.color]);
-  final String x;
-  final double y;
-  final Color? color;
-}
-   class ChartData2 {
-        ChartData2(this.x, this.y, this.color);
-        final String x;
-        final double y;
-        Color? color;
-    }
-      class ChartData3 {
-        ChartData3(this.x, this.y, this.size,this.color, this.y1);
-            final DateTime x;
-            final double y;
-            final double size;
-            final String y1;
-            Color? color;
-    }
+
+
+   
